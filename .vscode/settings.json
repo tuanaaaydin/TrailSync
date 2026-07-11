@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "shared/src/main/java",
+        "server/src/main/java",
+        "client/src/main/java",
+        "gui/src/main/java"
+    ],
+    "java.configuration.updateBuildConfiguration": "automatic"
+}
