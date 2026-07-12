@@ -19,4 +19,5 @@ Außerdem habe ich gelernt wie wichtig Thread-Sicherheit ist. Ohne ConcurrentHas
 ## Abgabe
 
 Repository: https://github.com/tuanaaaydin/TrailSync
+
 Bolt Web-Dashboard: https://outdoor-activity-das-ocin.bolt.host
