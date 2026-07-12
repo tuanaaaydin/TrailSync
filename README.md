@@ -176,3 +176,25 @@ komplett separaten JVM-Prozessen laufen!
 | Editor | VS Code mit Java Extension Pack |
 | Versionskontrolle | Git / GitHub |
 | KI-Tools | Claude, Bolt |
+
+---
+## Nachweis: CLI und VS Code
+
+Für die Entwicklung wurden beide Tools aktiv genutzt:
+
+**VS Code** wurde als Haupteditor verwendet. Alle Java-Dateien wurden dort
+geschrieben und bearbeitet.
+
+**CLI (Terminal)** wurde für den Build-Prozess, Git-Befehle und das Starten
+der drei Prozesse verwendet. Der Screenshot des laufenden CLI-Clients mit
+live Statistiken ist im Screenshots-Abschnitt zu sehen.
+
+## Installierte KI-Coding-Tools
+
+Folgende KI-Tools wurden installiert und teilweise verwendet:
+
+| Tool | Typ | Status |
+|------|-----|--------|
+| **Claude (claude.ai)** | Web-Interface | Aktiv verwendet für Java-Architektur und Code |
+| **Bolt (bolt.new)** | Web-Interface | Aktiv verwendet für Web-Dashboard (Aufgabe A) |
+| **Kilo Code** | VS Code Extension | Installiert |
