@@ -22,7 +22,7 @@ live tracken können.
 - Session starten, pausieren und beenden
 
 ### Aufgabe C – Verteilte Java-App
-TrailSync besteht aus drei separaten JVM-Prozessen die ausschließlich über
+TrailSync besteht aus drei separaten JVM-Prozessen, die ausschließlich über
 TCP-Sockets miteinander kommunizieren und keinen gemeinsamen Speicher teilen.
 Der CLI-Client sendet alle 2 Sekunden Aktivitätsdaten an den Server. Der Server
 verarbeitet sie und leitet sie weiter an das Java Swing Dashboard, das alles
