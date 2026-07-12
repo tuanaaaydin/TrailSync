@@ -10,7 +10,7 @@
 > Aktivitätsfilter und Live-Tabelle.
 
 ### Aufgabe B – Pet-Projekt (TrailSync CLI-Tracker)
-TrailSync ist ein mittleres Pet-Projekt – ein vollständiger
+TrailSync ist ein mittleres Pet-Projekt. Ein vollständiger
 Aktivitäts-Tracker bei dem Nutzer ihre Outdoor-Aktivitäten
 live tracken können.
 
