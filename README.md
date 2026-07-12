@@ -22,7 +22,12 @@ live tracken können.
 - Session starten, pausieren und beenden
 
 ### Aufgabe C – Verteilte Java-App
-Siehe Installationsanleitung unten (Build & Start).
+TrailSync besteht aus drei separaten JVM-Prozessen die ausschließlich über
+TCP-Sockets miteinander kommunizieren und keinen gemeinsamen Speicher teilen.
+Der CLI-Client sendet alle 2 Sekunden Aktivitätsdaten an den Server. Der Server
+verarbeitet sie und leitet sie weiter an das Java Swing Dashboard, das alles
+live anzeigt. Der Screenshot unten zeigt zwei Athleten die gleichzeitig in
+getrennten Prozessen tracken. Das ist der Beweis für die echte Verteilung.
 
 ---
 
@@ -146,6 +151,9 @@ komplett separaten JVM-Prozessen laufen!
 
 ### Aufgabe A – Bolt Web-GUI
 <img width="1439" height="723" alt="Bildschirmfoto 2026-07-12 um 17 22 13" src="https://github.com/user-attachments/assets/0ba31f7e-ee87-465d-a85c-f62556bebce7" />
+
+### Aufgabe B – CLI-Client (Terminal)
+<img width="634" height="359" alt="Bildschirmfoto 2026-07-12 um 21 24 15" src="https://github.com/user-attachments/assets/cef253e7-d902-47ae-bda4-cb14e3e7faf3" />
 
 ### Aufgabe B & C – Java Swing GUI (2 Athleten live)
 <img width="990" height="642" alt="Bildschirmfoto 2026-07-12 um 15 03 54" src="https://github.com/user-attachments/assets/60c54a82-049c-4d4a-9ceb-c99488238dc7" />
