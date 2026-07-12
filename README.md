@@ -152,7 +152,7 @@ komplett separaten JVM-Prozessen laufen!
 ## Screenshots
 
 ### Aufgabe A – Verwendeter Prompt in Bolt
-<img width="634" height="359" alt="Bildschirmfoto 2026-07-12 um 21 24 15" src="https://github.com/user-attachments/assets/defb74d6-cce3-49f3-b397-ba4c437f893d" />
+<img width="1434" height="721" alt="Bildschirmfoto 2026-07-12 um 22 07 52" src="https://github.com/user-attachments/assets/6375390a-df6f-4652-92ce-9350e3d54125" />
 
 ### Aufgabe A – Bolt Web-GUI
 <img width="1439" height="723" alt="Bildschirmfoto 2026-07-12 um 17 22 13" src="https://github.com/user-attachments/assets/0ba31f7e-ee87-465d-a85c-f62556bebce7" />
