@@ -63,10 +63,8 @@ Kommunikation läuft ausschließlich über **TCP-Sockets**.
 
 ## Architektur
 
-```
-CLI-Client  →  [TCP Port 9001]  →  Server  →  [TCP Port 9002]  →  GUI
-(Prozess 1)                      (Prozess 2)                    (Prozess 3)
-```                     (Prozess 2)                    (Prozess 3)
+    CLI-Client  →  [TCP Port 9001]  →  Server  →  [TCP Port 9002]  →  GUI
+    (Prozess 1)                      (Prozess 2)                    (Prozess 3)
 ---
 
 ## Module
