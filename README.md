@@ -1,9 +1,46 @@
 # 🏃 TrailSync – Verteiltes Outdoor-Tracking System
 
+## Live Demo
+
+### Aufgabe A – Web-GUI (erstellt mit Bolt)
+🌐 **[TrailSync Web-Dashboard öffnen](https://outdoor-activity-das-ocin.bolt.host)**
+
+> Erstellt mit Bolt.new per KI-Prompt.
+> Zeigt das Dashboard-Design mit Statistik-Karten,
+> Aktivitätsfilter und Live-Tabelle.
+
+### Aufgabe B – Pet-Projekt (TrailSync CLI-Tracker)
+TrailSync ist ein mittleres Pet-Projekt – ein vollständiger
+Aktivitäts-Tracker bei dem Nutzer ihre Outdoor-Aktivitäten
+live tracken können.
+
+**Features:**
+- Aktivitätsauswahl: Laufen, Wandern, Radfahren
+- Automatische GPS-Simulation alle 2 Sekunden
+- Live-Anzeige von Distanz, Puls, Schritte, Höhenmeter
+- Mehrere Nutzer gleichzeitig trackbar
+- Session starten, pausieren und beenden
+
+### Aufgabe C – Verteilte Java-App
+Siehe Installationsanleitung unten (Build & Start).
+
+---
+
+## Verwendete KI-Tools
+
+| Aufgabe | Tool | Ergebnis |
+|---------|------|----------|
+| A – Web-GUI | **Bolt (bolt.new)** | Web-Dashboard, live unter obigem Link |
+| B & C – Java-App | **Claude (claude.ai)** | Verteilte Java-App mit Server, Client, GUI |
+
+---
+
 ## Projektidee
 TrailSync ist ein verteiltes Echtzeit-System zum Tracken von
-Outdoor-Aktivitäten (Laufen, Wandern, Radfahren) und wurde
-als Einsendeaufgabe für das Modul Softwaretechnik entwickelt.
+Outdoor-Aktivitäten (Laufen, Wandern, Radfahren).
+Entwickelt als Einsendeaufgabe für das Modul Softwaretechnik.
+
+---
 
 ## Warum ist es wirklich verteilt?
 Das System besteht aus **3 separaten JVM-Prozessen**:
@@ -17,9 +54,12 @@ Das System besteht aus **3 separaten JVM-Prozessen**:
 Die Prozesse teilen **keinen gemeinsamen Speicher**.
 Kommunikation läuft ausschließlich über **TCP-Sockets**.
 
+---
+
 ## Architektur
 CLI-Client  →  [TCP Port 9001]  →  Server  →  [TCP Port 9002]  →  GUI
 (Prozess 1)                      (Prozess 2)                    (Prozess 3)
+---
 
 ## Module
 | Modul | Datei | Beschreibung |
@@ -30,10 +70,12 @@ CLI-Client  →  [TCP Port 9001]  →  Server  →  [TCP Port 9002]  →  GUI
 | `client` | `TrailClient.java` | CLI-Tracker mit GPS-Simulation |
 | `gui` | `TrailGUI.java` | Java Swing Live-Dashboard |
 
+---
+
 ## Technische Konzepte
 
 ### Java Object Serialization
-Daten werden als Byte-Stream über TCP übertragen:
+Daten werden als Byte-Stream über TCP übertragen.
 ActivityData implementiert Serializable – der Client sendet
 das Objekt mit writeObject(), der Server empfängt es mit readObject().
 
@@ -45,56 +87,79 @@ Die Session-Verwaltung nutzt ConcurrentHashMap für Thread-Sicherheit.
 Alle UI-Updates laufen via SwingUtilities.invokeLater()
 im Event Dispatch Thread – sonst würde die GUI einfrieren.
 
+---
+
 ## Build & Start
 
-### 1. Kompilieren
+### Voraussetzungen
+- Java 17 oder höher installiert
+- macOS / Linux (für build.sh)
+
+### 1. Repository klonen
+```bash
+git clone https://github.com/tuanaaaydin/TrailSync.git
+cd TrailSync
+```
+
+### 2. Kompilieren
 ```bash
 chmod +x build.sh
 ./build.sh
 ```
 
-### 2. Starten (3 separate Terminals!)
+### 3. Starten – 3 separate Terminals öffnen!
 
-Terminal 1 – Server zuerst!
+**Terminal 1 – Server zuerst starten:**
 ```bash
 cd server
 java -cp out:../shared/out trailsync.server.TrailServer
 ```
 
-Terminal 2 – GUI
+**Terminal 2 – GUI starten:**
 ```bash
 cd gui
 java -cp out:../shared/out trailsync.gui.TrailGUI
 ```
 
-Terminal 3 – CLI Client
+**Terminal 3 – CLI Client starten:**
 ```bash
 cd client
 java -cp out:../shared/out trailsync.client.TrailClient
 ```
 
-### 3. CLI-Befehle
-- start  → Aktivität starten (Laufen/Wandern/Radfahren wählen)
-- status → Aktuelle Stats anzeigen
-- stop   → Aktivität beenden
-- quit   → Programm beenden
+### 4. CLI-Befehle
+- `start` → Aktivität starten (Laufen / Wandern / Radfahren wählen)
+- `status` → Aktuelle Stats anzeigen
+- `stop` → Aktivität beenden
+- `quit` → Programm beenden
+
+---
 
 ## Verteilung beweisen
 Starte 2 CLI-Clients gleichzeitig in verschiedenen Terminals –
 beide erscheinen live im GUI-Dashboard, obwohl sie in
 komplett separaten JVM-Prozessen laufen!
 
-## Tools
-- Sprache: Java 17
-- GUI: Java Swing
-- Netzwerk: TCP Sockets (java.net)
-- Editor: VS Code mit Java Extension Pack
-- Versionskontrolle: Git / GitHub
+---
 
 ## Screenshots
 
-### GUI – Leer beim Start
-![GUI Start](docs/screenshots/gui_start.png)
+### Aufgabe A – Bolt Web-GUI
+<img width="1439" height="723" alt="Bildschirmfoto 2026-07-12 um 17 22 13" src="https://github.com/user-attachments/assets/0ba31f7e-ee87-465d-a85c-f62556bebce7" />
 
-### GUI – Live Tracking (Tuana läuft!)
-![GUI Live](docs/screenshots/gui_live.png)
+### Aufgabe B & C – Java Swing GUI (2 Athleten live)
+<img width="990" height="642" alt="Bildschirmfoto 2026-07-12 um 15 03 54" src="https://github.com/user-attachments/assets/60c54a82-049c-4d4a-9ceb-c99488238dc7" />
+
+---
+
+## Tools & Technologien
+| Kategorie | Tool |
+|-----------|------|
+| Sprache | Java 17 |
+| GUI | Java Swing |
+| Web-Frontend | React + Tailwind CSS (via Bolt) |
+| Netzwerk | TCP Sockets (java.net) |
+| Serialisierung | Java Object Serialization |
+| Editor | VS Code mit Java Extension Pack |
+| Versionskontrolle | Git / GitHub |
+| KI-Tools | Claude, Bolt |
