@@ -4,10 +4,10 @@
 TrailSync ist ein verteiltes Echtzeit-Tracking-System für Outdoor-Aktivitäten wie Laufen, Wandern und Radfahren.
 
 ## Warum dieses Projekt?
-Die Idee entstand aus dem persönlichen Interesse an Sport und Fitness. Ein System das mehrere Athleten gleichzeitig trackt und die Daten live auf einem Dashboard anzeigt ist sowohl technisch interessant als auch praktisch nutzbar.
+Die Idee entstand aus dem persönlichen Interesse an Sport und Fitness. Ein System, das mehrere Athleten gleichzeitig trackt und die Daten live auf einem Dashboard anzeigt, ist sowohl technisch interessant als auch praktisch nutzbar.
 
 ## Geplante Architektur
-Das System sollte von Anfang an verteilt sein – also aus mehreren unabhängigen Prozessen bestehen die über ein Netzwerk kommunizieren.
+Das System sollte von Anfang an verteilt sein. Das heißt es muss aus mehreren unabhängigen Prozessen bestehen, die über ein Netzwerk kommunizieren.
 
 Die drei Prozesse wurden wie folgt geplant:
 
