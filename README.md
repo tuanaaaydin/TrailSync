@@ -5,7 +5,7 @@
 ### Aufgabe A – Web-GUI (erstellt mit Bolt)
 🌐 **[TrailSync Web-Dashboard öffnen](https://outdoor-activity-das-ocin.bolt.host)**
 
-> Erstellt mit Bolt.new per KI-Prompt.
+> Erstellt mit Bolt.new.
 > Zeigt das Dashboard-Design mit Statistik-Karten,
 > Aktivitätsfilter und Live-Tabelle.
 
