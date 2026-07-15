@@ -92,7 +92,7 @@ Die Session-Verwaltung nutzt ConcurrentHashMap für Thread-Sicherheit.
 
 ### Swing EDT-Thread-Safety
 Alle UI-Updates laufen via SwingUtilities.invokeLater()
-im Event Dispatch Thread – sonst würde die GUI einfrieren.
+im Event Dispatch Thread. Sonst würde die GUI einfrieren.
 
 ---
 
