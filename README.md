@@ -83,8 +83,8 @@ Kommunikation läuft ausschließlich über **TCP-Sockets**.
 
 ### Java Object Serialization
 Daten werden als Byte-Stream über TCP übertragen.
-ActivityData implementiert Serializable – der Client sendet
-das Objekt mit writeObject(), der Server empfängt es mit readObject().
+ActivityData implementiert Serializable, der Client sendet
+das Objekt mit writeObject() und der Server empfängt es mit readObject().
 
 ### Multithreading im Server
 Für jeden neuen Client startet der Server einen eigenen Thread.
