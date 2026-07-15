@@ -1,4 +1,4 @@
-# 🏃 TrailSync – Verteiltes Outdoor-Tracking System
+# TrailSync – Verteiltes Outdoor-Tracking System
 
 ## Live Demo
 
