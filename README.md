@@ -143,9 +143,9 @@ java -cp out:../shared/out trailsync.client.TrailClient
 ---
 
 ## Verteilung beweisen
-Starte 2 CLI-Clients gleichzeitig in verschiedenen Terminals –
-beide erscheinen live im GUI-Dashboard, obwohl sie in
-komplett separaten JVM-Prozessen laufen!
+Man kann 2 CLI-Clients gleichzeitig in verschiedenen Terminals starten.
+Beide erscheinen live im GUI-Dashboard, obwohl sie in
+komplett separaten JVM-Prozessen laufen.
 
 ---
 
